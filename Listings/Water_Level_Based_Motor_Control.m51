@@ -1,0 +1,120 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/26/2019  21:27:14  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\Water_Level_Based_Motor_Control.obj TO .\Objects\Water_Leve
+>> l_Based_Motor_Control PRINT (.\Listings\Water_Level_Based_Motor_Control.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\Water_Level_Based_Motor_Control.obj (WATER_LEVEL_BASED_MOTOR_CONTROL)
+
+
+LINK MAP OF MODULE:  .\Objects\Water_Level_Based_Motor_Control (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001EH     UNIT         ?PR?MAIN?WATER_LEVEL_BASED_MOTOR_CONTROL
+            CODE    081EH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Water_Level_Based_Motor_Control (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?WATER_LEVEL_BASED_MOTOR_CONTROL
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Water_Level_Based_Motor_Control (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:081EH         SEGMENT       ?C_C51STARTUP
+  I:0008H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  03/26/2019  21:27:14  PAGE 2
+
+
+  C:0821H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:081EH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:081EH         LINE#         133
+  C:0820H         LINE#         134
+  C:0821H         LINE#         135
+  C:0822H         LINE#         136
+  C:0824H         LINE#         185
+  C:0827H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        WATER_LEVEL_BASED_MOTOR_CONTROL
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:0090H.0       PUBLIC        low1
+  C:0800H         PUBLIC        main
+  B:00B0H.0       PUBLIC        high1
+  B:00A0H.0       PUBLIC        motor1
+  -------         PROC          MAIN
+  C:0800H         LINE#         7
+  C:0800H         LINE#         8
+  C:0800H         LINE#         10
+  C:0800H         LINE#         11
+  C:0800H         LINE#         12
+  C:0803H         LINE#         13
+  C:0803H         LINE#         14
+  C:0806H         LINE#         15
+  C:080AH         LINE#         16
+  C:0810H         LINE#         17
+  C:0812H         LINE#         19
+  C:0814H         LINE#         20
+  C:081AH         LINE#         21
+  C:081CH         LINE#         22
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        WATER_LEVEL_BASED_MOTOR_CONTROL
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002DH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=45
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
